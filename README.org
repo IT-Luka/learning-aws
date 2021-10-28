@@ -1,14 +1,17 @@
 #+TITLE: Learning AWS
+#+AUTHOR: Luka Marković
 #+STARTUP: overview
 
+*   Introduction
+Following the advice in this post https://www.reddit.com/r/sysadmin/comments/8inzn5/so_you_want_to_learn_aws_aka_how_do_i_learn_to_be/
 * Table of Contents :TOC_2:
 -   [[#introduction][Introduction]]
-- [[#x-account-basics][[X] Account Basics]]
-  - [[#x-create-an-iam-user-for-your-personal-use][[X] Create an IAM user for your personal use.]]
-  - [[#x-set-up-mfa-for-your-root-user-turn-off-all-root-user-api-keys][[X] Set up MFA for your root user, turn off all root user API keys.]]
-  - [[#x-set-up-billing-alerts-for-anything-over-a-few-dollars][[X] Set up Billing Alerts for anything over a few dollars.]]
-  - [[#x-configure-the-aws-cli-for-your-user-using-api-credentials][[X] Configure the AWS CLI for your user using API credentials.]]
-  - [[#x-checkpoint-you-can-use-the-aws-cli-to-interrogate-information-about-your-aws-account][[X] Checkpoint: You can use the AWS CLI to interrogate information about your AWS account.]]
+-  [[#account-basics][Account Basics]]
+  -  [[#create-an-iam-user-for-your-personal-use][Create an IAM user for your personal use.]]
+  -  [[#set-up-mfa-for-your-root-user-turn-off-all-root-user-api-keys][Set up MFA for your root user, turn off all root user API keys.]]
+  -  [[#set-up-billing-alerts-for-anything-over-a-few-dollars][Set up Billing Alerts for anything over a few dollars.]]
+  -  [[#configure-the-aws-cli-for-your-user-using-api-credentials][Configure the AWS CLI for your user using API credentials.]]
+  -  [[#checkpoint-you-can-use-the-aws-cli-to-interrogate-information-about-your-aws-account][Checkpoint: You can use the AWS CLI to interrogate information about your AWS account.]]
 -   [[#web-hosting-basics][Web Hosting Basics]]
   -  [[#deploy-a-ec2-vm-and-host-a-simple-static-fortune-of-the-day-coming-soon-web-page][Deploy a EC2 VM and host a simple static "Fortune-of-the-Day Coming Soon" web page.]]
   -  [[#take-a-snapshot-of-your-vm-delete-the-vm-and-deploy-a-new-one-from-the-snapshot-basically-disk-backup--disk-restore][Take a snapshot of your VM, delete the VM, and deploy a new one from the snapshot. Basically disk backup + disk restore.]]
@@ -61,18 +64,16 @@
   -  [[#networking-create-a-new-vpc-from-scratch-with-multiple-subnets-youll-learn-a-lot-of-networking-concepts-once-that-is-working-create-another-vpc-and-peer-them-together-get-a-vm-in-each-subnet-to-talk-to-eachother-using-only-their-private-ip-addresses][Networking: Create a new VPC from scratch with multiple subnets (you'll learn a LOT of networking concepts), once that is working create another VPC and peer them together. Get a VM in each subnet to talk to eachother using only their private IP addresses.]]
   -  [[#kms-go-back-and-redo-the-early-ec2-instance-goals-but-enable-encryption-on-the-disk-volumes-learn-how-to-encrypt-an-ami][KMS: Go back and redo the early EC2 instance goals but enable encryption on the disk volumes. Learn how to encrypt an AMI.]]
 
-*   Introduction
-Following the advice in this post https://www.reddit.com/r/sysadmin/comments/8inzn5/so_you_want_to_learn_aws_aka_how_do_i_learn_to_be/
-* [X] Account Basics
-** [X] Create an IAM user for your personal use.
+*  Account Basics
+**  Create an IAM user for your personal use.
 https://docs.aws.amazon.com/iam/index.html
-** [X] Set up MFA for your root user, turn off all root user API keys.
+**  Set up MFA for your root user, turn off all root user API keys.
 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html
-** [X] Set up Billing Alerts for anything over a few dollars.
+**  Set up Billing Alerts for anything over a few dollars.
 https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html
-** [X] Configure the AWS CLI for your user using API credentials.
+**  Configure the AWS CLI for your user using API credentials.
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
-** [X] Checkpoint: You can use the AWS CLI to interrogate information about your AWS account.
+**  Checkpoint: You can use the AWS CLI to interrogate information about your AWS account.
 https://docs.aws.amazon.com/cli/latest/reference/iam/get-account-summary.html
 #+begin_src bash
 aws iam get-account-summary
