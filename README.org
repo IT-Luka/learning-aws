@@ -2,8 +2,6 @@
 #+AUTHOR: Luka Marković
 #+STARTUP: overview
 
-*   Introduction
-Following the advice in this post https://www.reddit.com/r/sysadmin/comments/8inzn5/so_you_want_to_learn_aws_aka_how_do_i_learn_to_be/
 * Table of Contents :TOC_1:
 -   [[#introduction][Introduction]]
 -  [[#account-basics][Account Basics]]
@@ -18,6 +16,8 @@ Following the advice in this post https://www.reddit.com/r/sysadmin/comments/8in
 -   [[#continuous-delivery][Continuous Delivery]]
 -   [[#miscellaneous--bonus][Miscellaneous / Bonus]]
 
+*   Introduction
+Following the advice in this post https://www.reddit.com/r/sysadmin/comments/8inzn5/so_you_want_to_learn_aws_aka_how_do_i_learn_to_be/
 *  Account Basics
 **  Create an IAM user for your personal use.
 https://docs.aws.amazon.com/iam/index.html
