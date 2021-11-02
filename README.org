@@ -42,13 +42,12 @@ https://docs.aws.amazon.com/cli/latest/reference/organizations/describe-account.
 *** Resources
 https://medium.com/innovation-incubator/deploy-a-flask-app-on-aws-ec2-d1d774c275a2
 *** Code
-#+begin_src bash :wrap:
-sudo apt-get update
-sudo apt-get install apache2 libapache2-mod-wsgi python3 python3-pip
+#+begin_src bash
+sudo yum -y install git httpd python3 python3-pip
 sudo pip install flask
 git clone --branch flask --single-branch --depth 1 git@github.com:IT-Luka/learning-aws.git /var/www/html/
 sed -i "/DocumentRoot/a WSGIDaemonProcess flaskapp threads=5 \n WSGIScriptAlias / /var/www/html/flaskapp/flaskapp.wsgi \n <Directory flaskapp> \n \ \ \ \ \ WSGIProcessGroup flaskapp \n \ \ \ \ \ WSGIApplicationGroup %{GLOBAL} \n \ \ \ \ \ Order deny,allow \n \ \ \ \ \Allow from all \n </Directory>" /etc/apache2/sites-enabled/000-default.conf
-sudo service apache2 restart
+sudo service httpd restart
 #+end_src
 **  Take a snapshot of your VM, delete the VM, and deploy a new one from the snapshot. Basically disk backup + disk restore.
 **  Checkpoint: You can view a simple HTML page served from your EC2 instance.
